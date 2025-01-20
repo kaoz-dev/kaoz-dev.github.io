@@ -1,23 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-</head>
-<body>
-    <header>
-        <h1>Hi</h1>
-        <h1>I'm Siyanda, welcome to my portfolio</h1>
-    </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>I am a DevOps trainee passionate about technology and automation.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 <your name></p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Siyanda Mthimkhulu</title>
+        <!-- TailwindCSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome for Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    </head>
+    
+    <body class="bg-gray-100 text-gray-800 font-sans">
+        <header class="bg-[#0a192f] text-[#ccd6f6] py-4 sticky top-0 z-10">
+            <nav class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full">
+                </div>
+                <!-- Navbar Links -->
+                <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+                    <a href="#about" class="hover:text-[#64ffda]">About</a>
+                    <a href="#tool stack" class="hover:text-[#64ffda]">Tool Stack</a>
+                    <a href="#projects" class="hover:text-[#64ffda]"> Projects</a>
+                    <a href="#contact" class="hover:text-[#64ffda]">Contact</a>
+                    <a href="resume.pdf" target="_blank" class="px-4 py-2 border border-[#64ffda] text-[#64ffda] rounded-md hover:bg-[#64ffda] hover:text-[#0a192f] transition duration-300">
+                        Resume
+                    </a>
+                </div>
+            </nav>
+        </header>
+        
+        
+        
+        <main class="p-6">
+            <section class="bg-[#0a192f] text-[#ccd6f6] min-h-screen flex items-center">
+                <div class="max-w-5xl mx-auto px-4">
+                    <p class="text-lg text-[#64ffda] mb-4">Hi, my name is</p>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">Siyanda Mthimkhulu.</h1>
+                    <h2 class="text-4xl md:text-4xl font-mono text-[#8892b0] mb-6">
+                        <span class="text-[#64ffda]">siyanda@DEV:$</span> <span class="text-green-600">sudo </span>make something amazing _
+                    </h2>
+                    <p class="text-lg text-[#8892b0] mb-8">
+                        ICT applications development graduate. </br> DevOps trainee. </br>Cloud technology and Automation Enthusiast.
+                    </p>
+                    <a href="#projects" class="px-6 py-3 border border-[#64ffda] text-[#64ffda] rounded-md hover:bg-[#64ffda] hover:text-[#0a192f] transition duration-300">
+                        Check out my projects
+                    </a>
+                </div>
+            </section>
+            
+            <section id="tool-stack" class="bg-[#0a192f] text-[#ccd6f6] py-12">
+                <div class="max-w-5xl mx-auto px-4">
+                    <h3 class="text-3xl font-semibold text-[#64ffda] mb-8">My Tool Stack</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <!-- Python -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-python text-5xl text-blue-500"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Python</p>
+                        </div>
+                        <!-- Docker -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-docker text-5xl text-blue-600"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Docker</p>
+                        </div>
+                        <!-- Linux -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-linux text-5xl text-gray-300"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Linux</p>
+                        </div>
+                        <!-- Terraform -->
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-server text-5xl text-purple-600"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Terraform</p>
+                        </div>
+                        <!-- GitLab -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-gitlab text-5xl text-orange-500"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">GitLab</p>
+                        </div>
+                        <!-- Git -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-git-alt text-5xl text-red-500"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Git</p>
+                        </div>
+                        <!-- Java -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-java text-5xl text-red-600"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Java</p>
+                        </div>
+                        <!-- Selenium -->
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-vial text-5xl text-green-600"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Selenium</p>
+                        </div>
+                        <!-- Azure -->
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-microsoft text-5xl text-blue-700"></i>
+                            <p class="text-sm mt-3 text-[#8892b0]">Azure</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+        
+            <section id="projects" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">Projects</h2>
+                <ul class="list-disc pl-5">
+                    <li class="text-lg">Project 1: Awesome Automation</li>
+                    <li class="text-lg">Project 2: Cloud Infrastructure Setup</li>
+                </ul>
+            </section>
+        
+            <section id="reach-out">
+                <h2 class="text-3xl font-bold mb-4">Reach Out</h2>
+                <p class="text-lg mb-4">Feel free to connect with me on these platforms or check out my resume:</p>
+                <div class="flex space-x-6 mb-4">
+                    <a href="mailto:youremail@example.com" target="_blank" class="text-blue-600 text-3xl hover:text-blue-400">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" class="text-blue-600 text-3xl hover:text-blue-400">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/yourgithub" target="_blank" class="text-gray-800 text-3xl hover:text-gray-600">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://gitlab.com/yourgitlab" target="_blank" class="text-orange-600 text-3xl hover:text-orange-400">
+                        <i class="fab fa-gitlab"></i>
+                    </a>
+                </div>
+                <a href="resume.pdf" target="_blank" class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                    View CV
+                </a>
+                
+            </section>
+            
+            
+        </main>
+        
+        <footer class="bg-gray-800 text-white text-center p-4">
+            <p>&copy; 2025 ,Siyanda Mthimkhulu</p>
+        </footer>
+    </body>
 </html>
