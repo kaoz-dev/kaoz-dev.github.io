@@ -29,7 +29,13 @@
                 </div>
             </nav>
         </header>
-        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex flex-col bg-[#0a192f] text-[#ccd6f6] p-4">
+            <a href="#about" class="py-2 hover:text-[#64ffda]">About</a>
+            <a href="#tool-stack" class="py-2 hover:text-[#64ffda]">Tool Stack</a>
+            <a href="#projects" class="py-2 hover:text-[#64ffda]">Projects</a>
+            <a href="#contact" class="py-2 hover:text-[#64ffda]">Contact</a>
+          </div>
         
         
         <main class="p-6">
@@ -70,9 +76,10 @@
                         </div>
                         <!-- Terraform -->
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-server text-5xl text-purple-600"></i>
+                            <img src="Terraform-LogoMark_onDark.png" alt="Terraform Logo" class="w-12 h-12 object-contain" />
                             <p class="text-sm mt-3 text-[#8892b0]">Terraform</p>
                         </div>
+                        
                         <!-- GitLab -->
                         <div class="flex flex-col items-center">
                             <i class="fab fa-gitlab text-5xl text-orange-500"></i>
@@ -90,13 +97,18 @@
                         </div>
                         <!-- Selenium -->
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-vial text-5xl text-green-600"></i>
+                            <img src="selenium.svg" alt="Selenium Logo" class="w-12 h-12 object-contain" />
                             <p class="text-sm mt-3 text-[#8892b0]">Selenium</p>
                         </div>
                         <!-- Azure -->
                         <div class="flex flex-col items-center">
-                            <i class="fab fa-microsoft text-5xl text-blue-700"></i>
+                            <img src="azure (1).png" alt="azure Logo" class="w-12 h-12 object-contain" />
                             <p class="text-sm mt-3 text-[#8892b0]">Azure</p>
+                        </div>
+                        <!-- Postman -->
+                        <div class="flex flex-col items-center">
+                            <img src="postman.svg" alt="postman Logo" class="w-12 h-12 object-contain" />
+                            <p class="text-sm mt-3 text-[#8892b0]">Postman</p>
                         </div>
                     </div>
                 </div>
@@ -130,7 +142,7 @@
                     </div>
                     
                     <!-- Truck Rental System Project -->
-                    <div class="bg-[#112240] p-6 rounded-lg shadow-lg">
+                    <div class="bg-[#112240] p-6 rounded-lg shadow-lg mb-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                             <!-- Project Screenshot -->
                             <div>
@@ -149,7 +161,30 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="bg-[#112240] p-6 rounded-lg shadow-lg mb-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                          <!-- Project Screenshot -->
+                          <div>
+                            <img src="monitoring-tool.png" alt="Portfolio Monitoring Tool Screenshot" class="rounded-lg shadow-md">
+                          </div>
+                          <!-- Project Details -->
+                            <div>
+                             <h4 class="text-2xl font-bold mb-4 text-[#64ffda]">Portfolio Monitoring Tool</h4>
+                             <p class="text-[#8892b0] mb-4">
+                              A cloud-based monitoring tool that tracks visits to this portfolio. Built using AWS Lambda, DynamoDB, and API Gateway, it logs visitor statistics and provides insights into user activity.
+                             </p>
+                             <a href="https://github.com/kaoz-dev/portfolio-monitoring" target="_blank" class="inline-block bg-[#64ffda] text-[#0a192f] font-semibold py-2 px-4 rounded hover:bg-[#52e0c4] transition duration-200">
+                              View on GitHub
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>  
+
             </section>
             
             
@@ -188,4 +223,42 @@
                     &copy; 2025 Siyanda Mthimkhulu. Built with ❤️ and passion.
                 </p>
             </footer>
-            
+            <script>
+                const logVisit = async () => {
+                  try {
+                    await fetch("https://cgupphemua.execute-api.us-east-1.amazonaws.com", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({
+                        visit_time: new Date().toISOString(),
+                      }),
+                    });
+                    console.log("Visit logged successfully!");
+                  } catch (error) {
+                    console.error("Failed to log visit:", error);
+                  }
+                };
+              
+                // Trigger the visit logger when the page loads
+                window.addEventListener("DOMContentLoaded", logVisit);
+            </script>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-[#ccd6f6] focus:outline-none">
+                  <i class="fas fa-bars text-2xl"></i>
+                </button>
+              </div>
+              
+              
+              
+              <script>
+                const menuToggle = document.getElementById("menu-toggle");
+                const mobileMenu = document.getElementById("mobile-menu");
+              
+                menuToggle.addEventListener("click", () => {
+                  mobileMenu.classList.toggle("hidden");
+                });
+              </script>
+              
+                     
